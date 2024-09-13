@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Expenses";
+}
+
+@model List<Expense>
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4">Expenses</h1>
+        <br />
+        <table class="table table-striped table-hover table-bordered shadow">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var expense in Model)
+                    {
+                        <tr>
+                            <td>@expense.Id</td>
+                            <td>@expense.Value.ToString("C")</td>
+                            <td>@expense.Description</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

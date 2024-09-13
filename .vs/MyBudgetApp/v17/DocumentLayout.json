@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|c:\\users\\aleif\\source\\repos\\mybudgetapp\\mybudgetapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|solutionrelative:mybudgetapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|c:\\users\\aleif\\source\\repos\\mybudgetapp\\mybudgetapp\\views\\home\\expenses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|solutionrelative:mybudgetapp\\views\\home\\expenses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|c:\\users\\aleif\\source\\repos\\mybudgetapp\\mybudgetapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|solutionrelative:mybudgetapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|c:\\users\\aleif\\source\\repos\\mybudgetapp\\mybudgetapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|solutionrelative:mybudgetapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|c:\\users\\aleif\\source\\repos\\mybudgetapp\\mybudgetapp\\views\\home\\createeditexpense.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|solutionrelative:mybudgetapp\\views\\home\\createeditexpense.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|c:\\users\\aleif\\source\\repos\\mybudgetapp\\mybudgetapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|solutionrelative:mybudgetapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|c:\\users\\aleif\\source\\repos\\mybudgetapp\\mybudgetapp\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C01383D7-709B-4389-87BD-5812DC22D497}|MyBudgetApp\\MyBudgetApp.csproj|solutionrelative:mybudgetapp\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateEditExpense.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Views\\Home\\CreateEditExpense.cshtml",
+              "RelativeDocumentMoniker": "MyBudgetApp\\Views\\Home\\CreateEditExpense.cshtml",
+              "ToolTip": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Views\\Home\\CreateEditExpense.cshtml",
+              "RelativeToolTip": "MyBudgetApp\\Views\\Home\\CreateEditExpense.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-03T17:19:55.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MyBudgetApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MyBudgetApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAcwGYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-03T17:11:32.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MyBudgetApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MyBudgetApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T17:09:24.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Program.cs",
+              "RelativeDocumentMoniker": "MyBudgetApp\\Program.cs",
+              "ToolTip": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Program.cs",
+              "RelativeToolTip": "MyBudgetApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T17:08:50.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "MyBudgetApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "MyBudgetApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-03T17:02:22.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Expenses.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Views\\Home\\Expenses.cshtml",
+              "RelativeDocumentMoniker": "MyBudgetApp\\Views\\Home\\Expenses.cshtml",
+              "ToolTip": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Views\\Home\\Expenses.cshtml",
+              "RelativeToolTip": "MyBudgetApp\\Views\\Home\\Expenses.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-03T17:06:25.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Expense.cs",
+              "DocumentMoniker": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Models\\Expense.cs",
+              "RelativeDocumentMoniker": "MyBudgetApp\\Models\\Expense.cs",
+              "ToolTip": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\Models\\Expense.cs",
+              "RelativeToolTip": "MyBudgetApp\\Models\\Expense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T17:03:48.933Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
