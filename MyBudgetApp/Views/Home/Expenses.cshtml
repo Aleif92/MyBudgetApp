@@ -21,9 +21,19 @@
                     foreach (var expense in Model)
                     {
                         <tr>
-                            <td>@expense.Id</td>
-                            <td>@expense.Value.ToString("C")</td>
-                            <td>@expense.Description</td>
+                            <td>
+                            @expense.Id
+                            </td>
+                            <td>
+                            @expense.Value.ToString("C")
+                            </td>
+                            <td>
+                            @expense.Description
+                            </td>
+                            <td>
+                                <a asp-action="CreateEditExpense" asp-route-id="@expense.Id">Edit</a>
+                                <a asp-action="DeleteExpense" asp-route-id="@expense.Id">Delete</a>
+                            </td>
                         </tr>
                     }
                 }

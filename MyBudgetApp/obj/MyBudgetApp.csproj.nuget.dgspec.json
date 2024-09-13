@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\MyBudgetApp.csproj": {}
+    "C:\\Users\\aleif\\OneDrive\\Desktop\\repos\\MyBudgetApp\\MyBudgetApp\\MyBudgetApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\MyBudgetApp.csproj": {
+    "C:\\Users\\aleif\\OneDrive\\Desktop\\repos\\MyBudgetApp\\MyBudgetApp\\MyBudgetApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\MyBudgetApp.csproj",
+        "projectUniqueName": "C:\\Users\\aleif\\OneDrive\\Desktop\\repos\\MyBudgetApp\\MyBudgetApp\\MyBudgetApp.csproj",
         "projectName": "MyBudgetApp",
-        "projectPath": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\MyBudgetApp.csproj",
+        "projectPath": "C:\\Users\\aleif\\OneDrive\\Desktop\\repos\\MyBudgetApp\\MyBudgetApp\\MyBudgetApp.csproj",
         "packagesPath": "C:\\Users\\aleif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aleif\\source\\repos\\MyBudgetApp\\MyBudgetApp\\obj\\",
+        "outputPath": "C:\\Users\\aleif\\OneDrive\\Desktop\\repos\\MyBudgetApp\\MyBudgetApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
