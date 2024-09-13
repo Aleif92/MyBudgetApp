@@ -29,6 +29,10 @@ namespace MyBudgetApp.Controllers
         {
             var allExpenses = _context.Expenses.ToList();
 
+            var totalExpenses = allExpenses.Sum(x => x.Value);
+
+            ViewBag.Expenses = totalExpenses;
+
             return View(allExpenses);
         }
 
@@ -66,7 +70,7 @@ namespace MyBudgetApp.Controllers
         {
             if(model.Id == 0)
             {
-                //Create
+                // The id will be 0 if it is new so we will create an id for a new item
                 _context.Expenses.Add(model);
             }
             else
