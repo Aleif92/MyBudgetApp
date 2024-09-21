@@ -1,5 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using MyBudgetApp.Models;
+using System;
+using System.Data;
+using System.IO;
+using MySql.Data.MySqlClient;
+using Microsoft.Extensions.Configuration;
 
 namespace MyBudgetApp
 {
@@ -7,12 +12,21 @@ namespace MyBudgetApp
     {
         public static void Main(string[] args)
         {
+            //Config and connection string for connecting to Mysql db
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+            string connString = config.GetConnectionString("DefaultConnection");
+            IDbConnection conn = new MySqlConnection(connString);
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<ExpensesDbContext>(options =>
-            options.UseInMemoryDatabase("ExpenseDb"));
+           // builder.Services.AddDbContext<ExpensesDbContext>(options =>
+           // options.UseInMemoryDatabase("ExpenseDb"));
+           builder.Services.AddScoped<IExpenseRepo, DapperExpenseRepo>();
+           builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
@@ -23,6 +37,14 @@ namespace MyBudgetApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+           // var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container
+            
+
+            builder.Services.AddControllersWithViews();
+
+            //var app = builder.Build();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
