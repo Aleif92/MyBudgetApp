@@ -5,6 +5,7 @@ using System.Data;
 using System.IO;
 using MySql.Data.MySqlClient;
 using Microsoft.Extensions.Configuration;
+using IDbConnection = System.Data.IDbConnection;
 
 namespace MyBudgetApp
 {
@@ -13,20 +14,29 @@ namespace MyBudgetApp
         public static void Main(string[] args)
         {
             //Config and connection string for connecting to Mysql db
-            var config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
-            string connString = config.GetConnectionString("DefaultConnection");
-            IDbConnection conn = new MySqlConnection(connString);
+           //var config = new ConfigurationBuilder()
+                //.SetBasePath(Directory.GetCurrentDirectory())
+                //.AddJsonFile("appsettings.json")
+               // .Build();
+           // string connString = config.GetConnectionString("DefaultConnection");
+            //IDbConnection conn = new MySqlConnection(connString);
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IDbConnection>((s) =>
+            {
+                IDbConnection conn =
+                    new MySqlConnection(builder.Configuration.GetConnectionString("DefaultConnection"));
+                conn.Open();
+                return conn;
+            });
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            
            // builder.Services.AddDbContext<ExpensesDbContext>(options =>
            // options.UseInMemoryDatabase("ExpenseDb"));
            builder.Services.AddScoped<IExpenseRepo, DapperExpenseRepo>();
-           builder.Services.AddControllersWithViews();
+         
 
             var app = builder.Build();
 
@@ -42,7 +52,7 @@ namespace MyBudgetApp
 // Add services to the container
             
 
-            builder.Services.AddControllersWithViews();
+           
 
             //var app = builder.Build();
 

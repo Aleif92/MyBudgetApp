@@ -1,95 +1,79 @@
-
 using Microsoft.AspNetCore.Mvc;
+using MyBudgetApp;
 using MyBudgetApp.Models;
-using System.Diagnostics;
 
-namespace MyBudgetApp.Controllers
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    private readonly IExpenseRepo _dapperExpenseRepo;
+    private readonly ILogger<HomeController> _logger;
+
+    public HomeController(ILogger<HomeController> logger, IExpenseRepo dapperExpenseRepo)
     {
-       // private readonly ILogger<HomeController> _logger;
+        _logger = logger;
+        _dapperExpenseRepo = dapperExpenseRepo;
+    }
 
-        private readonly IExpenseRepo _dapperExpenseRepo;
-        //private readonly ExpensesDbContext _context;
+    public IActionResult Index()
+    {
+        return View();
+    }
 
-        public HomeController( IExpenseRepo dapperExpenseRepo)
+    public IActionResult Expenses()
+    {
+        var allExpenses = _dapperExpenseRepo.GetAllExpenses().ToList();
+        var totalExpenses = allExpenses.Sum(x => x.Value);
+        ViewBag.Expenses = totalExpenses;
+
+        return View(allExpenses);
+    }
+
+    public IActionResult DeleteExpense(int id)
+    {
+        _dapperExpenseRepo.DeleteExpense(id);
+        return RedirectToAction("Expenses");
+    }
+
+    // This action shows the form for creating/editing an expense
+    public IActionResult CreateEditExpense(int? id)
+    {
+        if (id == null) // New expense
         {
-           // _logger = logger;
-            _dapperExpenseRepo = dapperExpenseRepo;
+            return View(new Expense());
         }
 
-        public IActionResult Index()
+        // Edit existing expense, load it by Id
+        var expenseInDb = _dapperExpenseRepo.GetExpenseById(id.Value);
+        if (expenseInDb == null)
         {
-            return View();
+            return NotFound();
         }
 
-        public IActionResult Privacy()
+        return View(expenseInDb);
+    }
+
+    // Handles the form submission for creating or editing an expense
+    [HttpPost]
+    public IActionResult CreateEditExpense(Expense model)
+    {
+        _logger.LogInformation("Form submitted. Model state: {ModelState}", ModelState.IsValid);
+        
+        if (ModelState.IsValid)
         {
-            return View();
-        }
-
-        public IActionResult Expenses()
-        {
-            var allExpenses = _dapperExpenseRepo.GetAllExpenses().ToList();
-
-            var totalExpenses = allExpenses.Sum(x => x.Value);
-
-            ViewBag.Expenses = totalExpenses;
-
-            return View(allExpenses);
-        }
-
-        public IActionResult CreateEditExpense(int? id)
-        {
-            if (id != null)
+            if (model.Id == 0) // New expense
             {
-                //editing => load an expense by id
-
-                var expenseInDb = _dapperExpenseRepo.GetExpenseById(id.Value);
-
-                return View(expenseInDb);
-
-               // return RedirectToAction("Expenses");
+                _dapperExpenseRepo.Add(model.Description, model.Value);
+                _logger.LogInformation("New expense added with description: {Description}, value: {Value}", model.Description, model.Value);
+            }
+            else // Existing expense, update it
+            {
+                _dapperExpenseRepo.UpdateExpense(model);
+                _logger.LogInformation("Expense updated. Id: {Id}, Description: {Description}, Value: {Value}", model.Id, model.Description, model.Value);
             }
 
-
-            return View();
-            
+            return RedirectToAction("Expenses"); // Redirect to the list of expenses
         }
 
-        public IActionResult DeleteExpense(int id)
-        {
-            _dapperExpenseRepo.DeleteExpense(id);
-
-            // Redirect back to the list of expenses after deletion
-            return RedirectToAction("Expenses");
-           
-
-        }
-
-        // public IActionResult CreateEditExpenseForm(Expense model)
-        // {
-        //     if(model.Id == 0)
-        //     {
-        //         // The id will be 0 if it is new, so we will create an id for a new item
-        //         _context.Expenses.Add(model);
-        //     }
-        //     else
-        //     {
-        //         //Editing
-        //         _context.Expenses.Update(model);
-        //     }
-        //     
-        //     _context.SaveChanges();
-        //
-        //     return RedirectToAction("Expenses");
-        //
-        // }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        _logger.LogWarning("Model state is invalid. Returning to form.");
+        return View(model);
     }
 }
