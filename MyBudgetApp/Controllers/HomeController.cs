@@ -33,23 +33,23 @@ public class HomeController : Controller
         return RedirectToAction("Expenses");
     }
 
-    // // This action shows the form for creating/editing an expense
-    // public IActionResult CreateEditExpense(int? id)
-    // {
-    //     if (id == null) // New expense
-    //     {
-    //         return View(new Expense());
-    //     }
-    //
-    //     // Edit existing expense, load it by Id
-    //     var expenseInDb = _dapperExpenseRepo.GetExpenseById(id.Value);
-    //     if (expenseInDb == null)
-    //     {
-    //         return NotFound();
-    //     }
-    //
-    //     return View(expenseInDb);
-    // }
+    // This action shows the form for creating/editing an expense
+    public IActionResult CreateEditExpense(int? id)
+    {
+        if (id == null) // New expense
+        {
+            return View(new Expense());
+        }
+    
+        // Edit existing expense, load it by Id
+        var expenseInDb = _dapperExpenseRepo.GetExpenseById(id.Value);
+        if (expenseInDb == null)
+        {
+            return NotFound();
+        }
+    
+        return View(expenseInDb);
+    }
 
     // Handles the form submission for creating or editing an expense
     [HttpPost]
