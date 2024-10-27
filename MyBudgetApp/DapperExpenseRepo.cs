@@ -23,17 +23,6 @@ public class DapperExpenseRepo: IExpenseRepo
         var query = "SELECT * FROM Expenses WHERE Id = @Id";
         return _conn.QuerySingleOrDefault<Expense>(query, new { Id = id });
     }
-
-    // public Expense Add(string Description, decimal Value)
-    // {
-    //    // var query = "SELECT * FROM Expenses WHERE Id = @Id";
-    //     var query = "INSERT INTO Expenses (Description, Value) VALUES (@Description, @Value)";
-    //     return _conn.Execute(query, new { Description = Description, Value = Value });
-    //
-    // }
-    
-   
-
     
     public Expense DeleteExpense(int id)
     {
