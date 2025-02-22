@@ -4,16 +4,16 @@ using MyBudgetApp.Models;
 
 namespace MyBudgetApp;
 
-public class DapperExpenseRepo: IExpenseRepo
+public class DapperExpenseRepo : IExpenseRepo
 {
-    
+
     private readonly IDbConnection _conn;
-    
+
     public DapperExpenseRepo(IDbConnection conn)
     {
         _conn = conn;
     }
-    
+
     public IEnumerable<Expense> GetAllExpenses()
     {
         return _conn.Query<Expense>("SELECT * FROM Expenses");
@@ -23,7 +23,7 @@ public class DapperExpenseRepo: IExpenseRepo
         var query = "SELECT * FROM Expenses WHERE Id = @Id";
         return _conn.QuerySingleOrDefault<Expense>(query, new { Id = id });
     }
-    
+
     public Expense DeleteExpense(int id)
     {
         var expenseToDelete = _conn.QuerySingleOrDefault<Expense>("SELECT * FROM Expenses WHERE Id = @id", new { id });
@@ -38,7 +38,7 @@ public class DapperExpenseRepo: IExpenseRepo
         return expenseToDelete;
     }
 
-    
+
     public Expense Add(string description, decimal value)
     {
         var query = "INSERT INTO Expenses (Description, Value) VALUES (@Description, @Value); SELECT LAST_INSERT_ID();";
@@ -50,15 +50,14 @@ public class DapperExpenseRepo: IExpenseRepo
         var newExpenseQuery = "SELECT * FROM Expenses WHERE Id = @Id";
         return _conn.QuerySingleOrDefault<Expense>(newExpenseQuery, new { Id = id });
     }
-    
+
     public void UpdateExpense(Expense expense)
     {
         var query = "UPDATE Expenses SET Description = @Description, Value = @Value WHERE Id = @Id";
         _conn.Execute(query, new { expense.Description, expense.Value, expense.Id });
     }
 
-    public void Add(Expense description)
-    {
-        throw new NotImplementedException();
-    }
+    //public void Add(Expense description)
+    //{
+    //    throw new NotImplementedException();
 }

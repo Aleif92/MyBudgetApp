@@ -12,5 +12,5 @@ public interface IExpenseRepo
     Expense Add(string Description, decimal Value);
 
     void UpdateExpense(Expense expense);
-    void Add(Expense description);
+   // void Add(Expense description);
 }
