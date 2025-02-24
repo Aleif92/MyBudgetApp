@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\aleif\\OneDrive\\Desktop\\repos\\MyBudgetApp\\MyBudgetApp\\wwwroot\\images\\piggy-bank.png",
+      "PackagePath": "staticwebassets\\images\\piggy-bank.png"
+    },
+    {
+      "Id": "C:\\Users\\aleif\\OneDrive\\Desktop\\repos\\MyBudgetApp\\MyBudgetApp\\wwwroot\\images\\piggyBank-removebg-preview (1).png",
+      "PackagePath": "staticwebassets\\images\\piggyBank-removebg-preview (1).png"
+    },
+    {
+      "Id": "C:\\Users\\aleif\\OneDrive\\Desktop\\repos\\MyBudgetApp\\MyBudgetApp\\wwwroot\\images\\piggyBank.jpg",
+      "PackagePath": "staticwebassets\\images\\piggyBank.jpg"
+    },
+    {
       "Id": "C:\\Users\\aleif\\OneDrive\\Desktop\\repos\\MyBudgetApp\\MyBudgetApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
